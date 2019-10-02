@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -33,7 +34,7 @@ public class CopyOfCopyOfIrctcControllerTest1 {
 	
 	@Test
 	public void getWelcomeMessageTest() throws Exception{
-		//Mockito.when(service.getMessage()).thenReturn("dhananjaya");
+		Mockito.when(service.getMessage()).thenReturn("dhananjaya");
 		
 		mockMvc.perform(MockMvcRequestBuilders.get("/irctc/home"))
 		.andExpect(MockMvcResultMatchers.status().isOk())
